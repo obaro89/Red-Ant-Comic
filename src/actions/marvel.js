@@ -1,5 +1,8 @@
 import { toast } from "react-toastify";
-import config from "../config.json";
+//import config from "../config.json";
+const apiEndPoint = process.env.apiEndPoint;
+const apiKey = process.env.apiKey;
+
 import {
   SET_ERROR,
   FETCH_COMICS,
@@ -11,7 +14,7 @@ const axios = require("axios");
 export const getComics = () => async (dispatch) => {
   try {
     const { data: comics } = await axios.get(
-      config.apiEndPoint + "limit=10 &&" + config.apiKey
+      apiEndPoint + "limit=10 &&" + apiKey
     );
 
     dispatch({
