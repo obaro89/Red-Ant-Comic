@@ -1,7 +1,5 @@
 import { toast } from "react-toastify";
 //import config from "../config.json";
-const apiEndPoint = process.env.apiEndPoint;
-const apiKey = process.env.apiKey;
 
 import {
   SET_ERROR,
@@ -10,6 +8,9 @@ import {
   ADD_TO_FAVORITE,
 } from "../types";
 const axios = require("axios");
+
+const apiEndPoint = process.env.apiEndPoint;
+const apiKey = process.env.apiKey;
 
 export const getComics = () => async (dispatch) => {
   try {
